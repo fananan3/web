@@ -14,7 +14,7 @@
         <a href="javascript:void(0)">忘记密码?</a>
         <div>
           <button @click="mainpage">登录</button>
-          <button>注册</button>
+          <button @click="register">注册</button>
         </div>
       </div>
     </el-form>
@@ -33,6 +33,11 @@ const router = useRouter();
 
 function  mainpage(){
   router.push({name:'main'})
+}
+
+function  register(){
+
+  router.push({name:'register'})
 }
 
 //表单的ref属性
