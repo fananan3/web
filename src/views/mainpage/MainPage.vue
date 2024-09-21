@@ -9,40 +9,6 @@ function enterLeft(){
   router.push({name:'login'})
 }
 
-// 组件加载时监听
-// componentDidMount()
-// {
-//   window.addEventListener("scroll", this.scrollHandle,true);
-// }
-
-
-// 组件卸载时移除监听
-// componentWillUnmount()
-// {
-//   console.log(1);//控制台看是否被触发
-//   window.removeEventListener("scroll", this.scrollHandle);
-// }
-//
-// // 监听调用的方法
-// scrollHandle=()=>{
-//   console.log('监听滚动');
-//   this.currentScroll = window.pageYOffset //表示当前滚动的位置
-//
-//   if (this.currentScroll >= this.$refs.testref.offsetTop) { //当前滚动位置到达testref的时候，显示div（100作为调整用）
-//     this.testShow = true;
-//   }
-//   if (this.currentScroll >= this.$refs.test2ref.offsetTop - 100) {
-//     this.testShow2 = true;
-//   }
-//   if (this.currentScroll >= this.$refs.test3ref.offsetTop - 100) {
-//     this.testShow3 = true;
-//     setTimeout(() => {
-//       this.testShow3 = false;
-//     }, 400);
-//   }
-//
-// }
-
 // 导航栏
 let isActive = ref(false)
 let lastScrollPosition = ref(window.pageYOffset)
