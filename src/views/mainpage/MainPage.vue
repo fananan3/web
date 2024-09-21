@@ -1,6 +1,13 @@
-<script setup>
+<script setup lang="ts">
 
+import { useRouter  } from 'vue-router';
+import { ref} from 'vue';
 
+const router = useRouter();
+
+function enterLeft(){
+  router.push({name:'login'})
+}
 
 // 组件加载时监听
 // componentDidMount()
@@ -36,9 +43,7 @@
 //
 // }
 
-
 // 导航栏
-import {ref} from "vue";
 let isActive = ref(false)
 let lastScrollPosition = ref(window.pageYOffset)
 ; (() => {
@@ -55,13 +60,11 @@ let lastScrollPosition = ref(window.pageYOffset)
 
 })()
 
-
-
 </script>
 
 <template>
 
-  <div class="main"  @scroll="scrollHandle">
+  <div class="main"  >
      <!--导航栏-->
     <header  :class="{'header': true,'active': isActive,}" >
       <div class="logo"><routerLink to="/home" style="text-decoration: none;  color: white;"> Speed</routerLink></div>
@@ -113,7 +116,7 @@ let lastScrollPosition = ref(window.pageYOffset)
       
       <div class="body-show">
 
-        <el-carousel :interval="4000" type="card" height="400px" motion-blur="true">
+        <el-carousel :interval="4000" type="card" height="400px" motion-blur:motion-blur>
           <el-carousel-item >
             <img src="../../assets/yongjie1.jpg"/>
           </el-carousel-item>
@@ -150,7 +153,7 @@ let lastScrollPosition = ref(window.pageYOffset)
 
       <div class="bottom">
         <div class="bottom-item">
-          <h1 class="bottom-text">
+          <h1 class="bottom-text" @click="enterLeft">
             我是买家
           </h1>
         </div>
@@ -187,7 +190,7 @@ Header {
 
 .header {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   transition: all 0.5s ease-in-out;
   height: 3.5rem;
@@ -288,14 +291,6 @@ Header {
   text-align: center;
 }
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
-
 .bottom{
   width: 95%;
   margin-top: 70px;
@@ -318,14 +313,5 @@ Header {
   transition: color 0.5s ease;
 }
 
-.testenter{
-  transform: translateY(0%)!important;
-  opacity: 1!important;
-  transition: all .5s ease;
-}
-.test{
-  transform: translateY(10%);
-  opacity: 0;
-}
 
 </style>

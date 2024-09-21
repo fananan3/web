@@ -1,12 +1,24 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
+
+
 // 路由规则
-const routes = [
+const routes: Array<RouteRecordRaw> = [
+    {
+        path: '/',
+        name: '/',
+        component: () => import('@/views/mainpage/MainPage.vue')
+    },
 
  {  
   path: '/login',  
   name: 'login',  
   component: () => import('@/views/login/login.vue')
 },
+    {
+        path: '/main',
+        name: 'main',
+        component: () => import('@/views/mainpage/MainPage.vue')
+    },
 ]
 // 创建路由
 const router = createRouter({
