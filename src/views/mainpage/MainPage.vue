@@ -70,10 +70,9 @@ let lastScrollPosition = ref(window.pageYOffset)
       <div class="logo"><routerLink to="/home" style="text-decoration: none;  color: white;"> Speed</routerLink></div>
       <nav class="nav">
         <ul class="menu">
-          <li class="yy"><span class="yy-logo"></span> <span >个人中心</span></li>
           <li class="yy"><span class="yy-logo"></span> <span >卖家中心</span></li>
           <li class="yy" ><span class="yy-logo"></span> <span >买家中心</span></li>
-          <li class="yy" onclick="tologin"><span class="yy-logo"></span> <span >登录</span></li>
+          <li class="yy"><span class="yy-logo"></span> <span >个人中心</span></li>
         </ul>
       </nav>
     </header>
