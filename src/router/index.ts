@@ -23,6 +23,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'user',
         component: () => import('@/views/user/user.vue')
     },
+    {
+        path: '/goods',
+        name: 'goods',
+        component: () => import('@/views/goods/goods.vue')
+    },
 ]
 // 创建路由
 const router = createRouter({

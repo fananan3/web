@@ -13,6 +13,10 @@ function enteruser(){
   router.push({name:'user'})
 }
 
+function entergoods(){
+  router.push({name:'goods'})
+}
+
 // 导航栏
 let isActive = ref(false)
 let lastScrollPosition = ref(window.pageYOffset)
@@ -121,7 +125,7 @@ let lastScrollPosition = ref(window.pageYOffset)
 
       <div class="bottom">
         <div class="bottom-item">
-          <h1 class="bottom-text" @click="enterLeft">
+          <h1 class="bottom-text" @click="entergoods">
             我是买家
           </h1>
         </div>

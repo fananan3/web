@@ -62,14 +62,16 @@ const tableData = ref(Array.from({ length: 20 }).fill(item))
 </script>
 
 <style scoped>
-.layout-container-demo{
+.layout-container-demo .el-header {
   position: relative;
   background-color: rgba(0, 0, 0, 0.83);
-}
-.layout-container-demo{
   background-color: rgba(0, 0, 0, 0.83);
 }
-.layout-container-demo{
+.layout-container-demo .el-aside {
+  background-color: rgba(0, 0, 0, 0.83);
+  background-color: rgba(0, 0, 0, 0.83);
+}
+.layout-container-demo .el-menu {
   border-right: none;
 }
 .layout-container-demo .el-main {
@@ -88,7 +90,7 @@ const tableData = ref(Array.from({ length: 20 }).fill(item))
   display: flex;
   justify-content: left;
   padding-left: 60px;
-  height: 65px;
+  height: 58px;
   background-color: rgba(0, 0, 0, 0.96);
 }
 .logo{
