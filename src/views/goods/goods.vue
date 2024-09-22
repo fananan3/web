@@ -40,15 +40,14 @@ let lastScrollPosition = ref(window.pageYOffset)
 
   </div>
 
-
-
 </template>
 
 <style scoped>
 .main{
   width: 100%;
-  height: 2000px;
+  height:100%;
   background-color: rgba(0, 0, 0, 0.83);
+  padding-top: 10%;
 }
 
 
@@ -92,12 +91,12 @@ Header {
 }
 
 .body{
+
   width: 100%;
   height: 100%;
-  padding-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 5%;
+
 }
 
 .body-main{
@@ -107,7 +106,7 @@ Header {
   border-radius: 10px;
 }
 .body-main:hover{
-  box-shadow: 1px 1px 15px 5px rgba(63, 63, 65, 0.66);
+  box-shadow: 1px 1px 15px 5px rgba(90, 90, 93, 0.66);
   transition: box-shadow 0.3s ease;
   /* ... 其他样式 ... */
   animation: scaleUp 0.5s ease-in-out infinite alternate;
