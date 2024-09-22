@@ -9,6 +9,10 @@ function enterLeft(){
   router.push({name:'login'})
 }
 
+function enteruser(){
+  router.push({name:'user'})
+}
+
 // 导航栏
 let isActive = ref(false)
 let lastScrollPosition = ref(window.pageYOffset)
@@ -33,12 +37,12 @@ let lastScrollPosition = ref(window.pageYOffset)
   <div class="main"  >
      <!--导航栏-->
     <header  :class="{'header': true,'active': isActive,}" >
-      <div class="logo"><routerLink to="/home" style="text-decoration: none;  color: white;"> Speed</routerLink></div>
+      <div class="logo"><routerLink to="/" style="text-decoration: none;  color: white;"> Speed</routerLink></div>
       <nav class="nav">
         <ul class="menu">
           <li class="yy"><span class="yy-logo"></span> <span >卖家中心</span></li>
           <li class="yy" ><span class="yy-logo"></span> <span >买家中心</span></li>
-          <li class="yy"><span class="yy-logo"></span> <span >个人中心</span></li>
+          <li class="yy"><span class="yy-logo"></span> <span @click="enteruser">个人中心</span></li>
         </ul>
       </nav>
     </header>
@@ -115,7 +119,6 @@ let lastScrollPosition = ref(window.pageYOffset)
         </div>
         </div>
 
-
       <div class="bottom">
         <div class="bottom-item">
           <h1 class="bottom-text" @click="enterLeft">
@@ -124,7 +127,7 @@ let lastScrollPosition = ref(window.pageYOffset)
         </div>
 
         <div class="bottom-item">
-          <h1 class="bottom-text">
+          <h1 class="bottom-text" @click="enterLeft">
             我是卖家
           </h1>
         </div>
@@ -141,9 +144,8 @@ let lastScrollPosition = ref(window.pageYOffset)
 <style scoped>
 .main{
   width: 100%;
-  overflow: auto;
   height: 2000px;
-  background-color: #0a0a0b;
+  background-color: rgba(0, 0, 0, 0.83);
 }
 
 Header {
@@ -160,7 +162,7 @@ Header {
   transition: all 0.5s ease-in-out;
   height: 3.5rem;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.83);
+  background-color: rgba(0, 0, 0, 0.72);
   z-index: 10;
 }
 

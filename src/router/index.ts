@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'register',
         component: () => import('@/views/register/register.vue')
     },
+    {
+        path: '/user',
+        name: 'user',
+        component: () => import('@/views/user/user.vue')
+    },
 ]
 // 创建路由
 const router = createRouter({
